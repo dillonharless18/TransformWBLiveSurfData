@@ -16,10 +16,10 @@ addition_dict = {
 #     If left as null, pandas will throw a nan error
 for i in range(5):
     df['fun-factor-' + str(i)] = df['fun-factor-' + str(i)].fillna("zero")
-    # Also replace all nulls in swell_size and water_surface
-    if i == 0:
-        df['swell_size'] = df['swell_size'].fillna("Missing")
-        df['water_surface'] = df['water_surface'].fillna("Missing")
+    # # Also replace all nulls in swell_size and water_surface
+    # if i == 0:
+    #     df['swell_size'] = df['swell_size'].fillna("Missing")
+    #     df['water_surface'] = df['water_surface'].fillna("Missing")
 
 
 # Iterate through each row in the dataframe
@@ -34,8 +34,10 @@ for index, row in df.iterrows():
     # Strip the HTML from these two elements
     print("df.at[index, 'swell_size']: " + str(df.at[index, 'swell_size']))
     print("TYPE OF df.at[index, 'swell_size']: " + str(type(df.at[index, 'swell_size'])))
-    df.at[index, 'swell_size'] = df.at[index, 'swell_size'][28:]
-    df.at[index, 'water_surface'] = df.at[index, 'water_surface'][31:]
+    # df.at[index, 'swell_size'] = df.at[index, 'swell_size'][28:]
+    # df.at[index, 'water_surface'] = df.at[index, 'water_surface'][31:]
+    # df.at[index, 'swell_size'] = df.at[index, 'swell_size'][12:]
+    # df.at[index, 'water_surface'] = df.at[index, 'water_surface'][15:]
 
 # Delete the unnecessary columns
 for i in range(5):
